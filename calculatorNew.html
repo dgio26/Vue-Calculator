@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body>
+    <h1 style="text-align: center; padding: 5px;">Let's Count!</h1>
+    <div style="width: 300px; margin: auto; border: 3px solid skyblue; border-radius: 5px; padding: 20px;">
+        <div id="app">
+            <input v-model="var1">
+            <input v-model="var2">
+            <button v-on:click="result=parseFloat(var1)+parseFloat(var2)">+</button>
+            <button v-on:click="result=parseFloat(var1)-parseFloat(var2)">-</button>
+            <button v-on:click="result=parseFloat(var1)*parseFloat(var2)">*</button>
+            <button v-on:click="result=parseFloat(var1)/parseFloat(var2)">/</button>
+            Result: {{ result }}
+        </div>
+    </div>
+    <script src="calculatorVue.js"></script>
+</body>
+</html>
